@@ -143,23 +143,6 @@
         </div>
         <p>&copy; 2025 Patisserie Delight | All Rights Reserved</p>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const expandMenuBtn = document.getElementById('expandMenuBtn');
-            const menuSection = document.querySelector('.Menu');
-            
-            expandMenuBtn.addEventListener('click', function() {
-                menuSection.classList.toggle('show-hidden');
-                
-                // Toggle button text
-                this.textContent = menuSection.classList.contains('show-hidden') 
-                    ? 'Show Less' 
-                    : 'Show More';
-            });
-        });
-    </script>
-
+    <script src="script.js" defer></script>
 </body>
 </html>
