@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patisserie Delight</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        .Hidden-Part {
-            display: none; /* Hide these items initially */
-        }
-    </style>
 </head>
 <body>
 
@@ -22,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="Page.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="#Menu">Menu</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#ContactUs">Contact</a></li>
             </ul>
@@ -34,16 +30,16 @@
         <div class="hero-content">
             <h1>Sweet Delights, Every Bite!</h1>
             <p>Indulge in the finest handcrafted pastries.</p>
-            <a href="#" class="btn">Explore Menu</a>
+            <a href="#Menu" class="btn">Explore Menu</a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section class="Menu">
+    <section id="Menu" class="Menu">
         <h2>Our Menu</h2>
         <div class="Menu-grid">
             <div class="Menu-item">
-                <img src="eclair.jpg" alt="Éclair">
+                <img src="eclair.jpg" alt="Chocolate Éclair">
                 <h3>Chocolate Éclair</h3>
                 <p>Filled with smooth chocolate cream.</p>
             </div>
@@ -53,31 +49,29 @@
                 <p>Fresh fruits on a crisp buttery crust.</p>
             </div>
             <div class="Menu-item">
-                <img src="cupcake.jpg" alt="Cupcake">
+                <img src="cupcake.jpg" alt="Vanilla Cupcake">
                 <h3>Vanilla Cupcake</h3>
                 <p>Light and fluffy with sweet frosting.</p>
             </div>
+            <!-- Hidden Items (Unique Products) -->
+            <div class="Menu-item Hidden-Part">
+                <img src="macaron.jpg" alt="Strawberry Macaron">
+                <h3>Strawberry Macaron</h3>
+                <p>Delicate almond shells with strawberry filling.</p>
+            </div>
+            <div class="Menu-item Hidden-Part">
+                <img src="croissant.jpg" alt="Almond Croissant">
+                <h3>Almond Croissant</h3>
+                <p>Buttery layers with almond paste.</p>
+            </div>
+            <div class="Menu-item Hidden-Part">
+                <img src="cake.jpg" alt="Red Velvet Cake">
+                <h3>Red Velvet Cake</h3>
+                <p>Classic with cream cheese frosting.</p>
+            </div>
         </div>
-        <div class="Menu-item Hidden-Part">
-            <img src="eclair.jpg" alt="Éclair">
-            <h3>Chocolate Éclair</h3>
-            <p>Filled with smooth chocolate cream.</p>
-        </div>
-         <div class="Menu-item Hidden-Part">
-            <img src="tart.jpg" alt="Fruit Tart">
-             <h3>Fruit Tart</h3>
-            <p>Fresh fruits on a crisp buttery crust.</p>
-        </div>
-        <div class="Menu-item Hidden-Part">
-            <img src="cupcake.jpg" alt="Cupcake">
-            <h3>Vanilla Cupcake</h3>
-             <p>Light and fluffy with sweet frosting.</p>
-         </div>
-        </div>  
+        <button id="expandMenuBtn">Show More</button>
     </section>
-
-    <!-- Expandable Button -->
-    <button id="expandMenuBtn">Show More</button>
 
     <!-- Specialties Section -->
     <section class="specialties">
@@ -89,12 +83,12 @@
                 <p>Rich & creamy, topped with love.</p>
             </div>
             <div class="specialty-item">
-                <img src="macaron.jpg" alt="Macaron">
+                <img src="macaron.jpg" alt="French Macarons">
                 <h3>French Macarons</h3>
                 <p>Light, crispy, and full of flavor.</p>
             </div>
             <div class="specialty-item">
-                <img src="croissant.jpg" alt="Croissant">
+                <img src="croissant.jpg" alt="Butter Croissant">
                 <h3>Butter Croissant</h3>
                 <p>Golden, flaky, and buttery perfection.</p>
             </div>
@@ -105,9 +99,15 @@
     <section id="ContactUs" class="contact">
         <h2>Contact Us</h2>
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
@@ -115,30 +115,32 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#contact">Contact</a>
+            <a href="Page.html">Home</a>
+            <a href="#Menu">Menu</a>
+            <a href="#ContactUs">Contact</a>
         </div>
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
         <p>&copy; 2025 Patisserie Delight | All Rights Reserved</p>
     </footer>
 
-    <!-- Script -->
+    <!-- JavaScript -->
     <script>
-        // Get the button and additional items container
-        const expandMenuBtn = document.getElementById('expandMenuBtn');
-        const hiddenItems = document.querySelectorAll('.Hidden-Part');
-    
-        // Toggle the display of hidden items
-        expandMenuBtn.addEventListener('click', function() {
-            hiddenItems.forEach(item => {
-                item.style.display = item.style.display === 'none' ? 'block' : 'none'; // Toggle visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const expandMenuBtn = document.getElementById('expandMenuBtn');
+            const menuSection = document.querySelector('.Menu');
+            
+            expandMenuBtn.addEventListener('click', function() {
+                menuSection.classList.toggle('show-hidden');
+                
+                // Toggle button text
+                this.textContent = menuSection.classList.contains('show-hidden') 
+                    ? 'Show Less' 
+                    : 'Show More';
             });
-            expandMenuBtn.textContent = expandMenuBtn.textContent === 'Show More' ? 'Show Less' : 'Show More'; // Toggle button text
         });
     </script>
 
