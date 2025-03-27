@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(135deg, #ffb6c1, #fba1ca,#f27cb2,#ff69b4);
     color: #fff;
@@ -95,33 +99,143 @@ nav ul li a:hover {
 
 
 /* Menu Section */
-.menu {
-    padding: 50px 20px;
-}
-.menu h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-.menu-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.menu-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-}
-.menu-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-.menu-item h3 {
-    margin: 10px 0;
+.Menu {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
+.Menu h2 {
+    margin-bottom: 10px;
+}
+
+.Menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
+
+.Menu-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
+    backdrop-filter: blur(10px);            /* Frosted glass effect */
+    border-radius: 15px;                    /* Rounded corners */
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.Menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.Menu-item img:hover {
+    transform: scale(1.05);
+}
+
+.Menu-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Menu-item p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Menu-item.Hidden-Part {
+    display: none;
+    margin-top: 20px;
+}
+
+.Menu-item {
+    margin-bottom: 20px; 
+}
+
+
+.Menu-item.Hidden-Part:not([style*="display: none"]) {
+    margin-top: 20px; 
+}
+
+/* Specialties Section */
+.specialties {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.specialties h2 {
+    margin-bottom: 10px;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
+
+.specialty-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
+    backdrop-filter: blur(10px);            /* Frosted glass effect */
+    border-radius: 15px;                    /* Rounded corners */
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.specialty-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.specialty-item img:hover {
+    transform: scale(1.05);
+}
+
+.specialty-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.specialty-item p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#expandMenuBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#expandMenuBtn:hover {
+    background-color: #ff85c0;
+}
+
+.Hidden-Part {
+    display: none; /* Hide these items initially */
+}
 
 /* Contact Section */
 .contact {
@@ -176,8 +290,11 @@ footer {
     font-size: 24px;
     margin: 0 10px;
     transition: 0.3s;
+    position: relative;
+    top: -5px;
 }
 
 .social-icons a:hover {
     color: #ff69b4;
 }
+
