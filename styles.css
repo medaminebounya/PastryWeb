@@ -16,6 +16,51 @@ body {
     line-height: 1.6;
 }
 
+
+/*Backgroung*/
+
+.pastry {
+    position: fixed;
+    filter: blur(5px);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    background-size: cover;
+    background-position: center;
+    animation: float 8s ease-in-out infinite;
+}
+
+.pastry-1 {
+    width: 400px;
+    height: 400px;
+    top: 30%;
+    left: -5%;
+    transform: rotate(45deg);
+    background-image: url('Cupcake.png');
+}
+
+.pastry-2 {
+    width: 500px;
+    height: 500px;
+    bottom: 25%;
+    right: -5%;
+    transform: rotate(-20deg) scaleX(1);
+    background-image: url('Cheesecake.png');
+}
+
+.pastry::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 200, 200, 0.3); /* Pink tint */
+    mix-blend-mode: multiply;
+}
+
 /* ===== HEADER/NAVBAR ===== */
 header {
     display: flex;
@@ -74,8 +119,8 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 120px; /* Prevents navbar overlap */
-    margin-top: -80px; /* Compensates for fixed navbar */
+    padding-top: 120px;
+    margin-top: -80px; 
 }
 
 .hero-content {
@@ -128,10 +173,12 @@ nav ul li a:hover {
 }
 
 .Menu h2, .specialties h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-size: 2.5rem;
     margin-bottom: 40px;
     position: relative;
-    display: inline-block;
 }
 
 .Menu h2::after, .specialties h2::after {
@@ -146,12 +193,27 @@ nav ul li a:hover {
     border-radius: 2px;
 }
 
+.Menu, .specialties {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .Menu-grid, .specialties-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin: 0 auto;
 }
+
+/*.Menu-grid, .specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}*/
 
 .Menu-item, .specialty-item {
     background: rgba(255, 255, 255, 0.2);
@@ -227,13 +289,113 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
 }
 
-/* ===== SPECIALTIES SECTION ===== */
-.specialties {
-    padding: 80px 20px;
+/* Seasonal-specific styles */
+.seasonal-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), url('seasonal-bg.jpg') center/cover);
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    margin: 0 auto;
-    max-width: 1200px;
 }
+.seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.seasonal-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.seasonal-item:hover {
+    transform: translateY(-10px);
+}
+.seasonal-badge {
+    background: #ff69b4;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* Admin-specific styles */
+body.admin-login {
+    background: linear-gradient(135deg, #f27cb2, #ff69b4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-header img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.admin-header h1 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 
 /* ===== CONTACT SECTION ===== */
 .contact {
