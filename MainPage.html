@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patisserie Delight</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="pastry pastry-1"></div>
+    <div class="pastry pastry-2"></div>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Patisserie Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Login.html">Logout</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Specialties">Specialties</a></li>
+                <li><a href="#ContactUs">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sweet Delights, Every Bite!</h1>
+            <p>Indulge in the finest handcrafted pastries.</p>
+            <a href="#Menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+<section id="Menu" class="Menu">
+    <h2>Our Menu</h2>
+    <div class="Menu-grid">
+        <!-- Visible Items (unchanged) -->
+        <div class="Menu-item">
+            <img src="Images/EclairChocolat.png" alt="Chocolate Éclair">
+            <h3>Chocolate Éclair</h3>
+            <p>Filled with smooth chocolate cream.</p>
+        </div>
+        <div class="Menu-item">
+            <img src="Images/FruitTart.png" alt="Fruit Tart">
+            <h3>Fruit Tart</h3>
+            <p>Fresh fruits on a crisp buttery crust.</p>
+        </div>
+        <div class="Menu-item">
+            <img src="Images/VanillaCupcake.png" alt="Vanilla Cupcake">
+            <h3>Vanilla Cupcake</h3>
+            <p>Light and fluffy with sweet frosting.</p>
+        </div>
+
+        <!-- Hidden Items (NEW pastries!) -->
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/Macarons.png" alt="Raspberry Macaron">
+            <h3>Raspberry Macaron</h3>
+            <p>Delicate almond shells with tangy raspberry filling.</p>
+        </div>
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/ChocolateCroissant.png" alt="Chocolate Croissant">
+            <h3>Chocolate Croissant</h3>
+            <p>Flaky layers oozing with dark chocolate.</p>
+        </div>
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/LemonCheesecake.png" alt="Strawberry Cheesecake">
+            <h3>Lemon Cheesecake</h3>
+            <p>Creamy New York-style with lemon topping.</p>
+        </div>
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/Cannoli.png" alt="Sicilian Cannoli">
+            <h3>Sicilian Cannoli</h3>
+            <p>Crispy shells with strawberries and berries.</p>
+        </div>
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/PainAuChocolat.png" alt="Pain au Chocolat">
+            <h3>Pain au Chocolat</h3>
+            <p>Buttery French pastry with chocolate batons.</p>
+        </div>
+        <div class="Menu-item Hidden-Part">
+            <img src="Images/Tiramisu.png" alt="Tiramisu">
+            <h3>Tiramisu</h3>
+            <p>Espresso-soaked ladyfingers with mascarpone.</p>
+        </div>
+    </div>
+    <button id="expandMenuBtn">Show More</button>
+</section>
+
+    <!-- Specialties Section -->
+    <section id="Specialties" class="specialties">
+        <h2>Our Specialties</h2>
+        <div class="specialties-grid">
+            <div class="specialty-item">
+                <img src="Images/ChocolateCake.png" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich & creamy, topped with love.</p>
+            </div>
+            <div class="specialty-item">
+                <img src="Images/FrenchMacaron.png" alt="French Macarons">
+                <h3>French Macarons</h3>
+                <p>Light, crispy, and full of flavor.</p>
+            </div>
+            <div class="specialty-item">
+                <img src="Images/ButterCroissant.png" alt="Butter Croissant">
+                <h3>Butter Croissant</h3>
+                <p>Golden, flaky, and buttery perfection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="ContactUs" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="Page.html">Home</a>
+            <a href="#Menu">Menu</a>
+            <a href="#ContactUs">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Patisserie Delight | All Rights Reserved</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -38,7 +38,7 @@ body {
     top: 30%;
     left: -5%;
     transform: rotate(45deg);
-    background-image: url('Cupcake.png');
+    background-image: url('Images/Cupcake.png');
 }
 
 .pastry-2 {
@@ -47,7 +47,7 @@ body {
     bottom: 25%;
     right: -5%;
     transform: rotate(-20deg) scaleX(1);
-    background-image: url('Cheesecake.png');
+    background-image: url('Images/Cheesecake.png');
 }
 
 .pastry::after {
@@ -166,7 +166,7 @@ nav ul li a:hover {
 
 /* ===== MENU SECTION ===== */
 .Menu {
-    padding: 100px 20px 60px;
+    padding: 100px 20px 30px;
     text-align: center;
     margin: 0 auto;
     max-width: 1200px;
@@ -220,6 +220,9 @@ nav ul li a:hover {
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 25px;
+    height: 100%;
+    align-items: center;
+    text-align: center;
     overflow: hidden;
     transition: all 0.4s ease;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -230,13 +233,15 @@ nav ul li a:hover {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-.Menu-item img, .specialty-item img {
+.Menu-item img, 
+.specialty-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    display: block;
     margin-bottom: 15px;
-    transition: transform 0.4s;
+    transition: all 0.5s ease;
 }
 
 .Menu-item:hover img, .specialty-item:hover img {
@@ -247,6 +252,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: white;
+     margin-top: auto;
 }
 
 .Menu-item p, .specialty-item p {
@@ -278,7 +284,7 @@ nav ul li a:hover {
     font-size: 1rem;
     border-radius: 30px;
     cursor: pointer;
-    margin: 40px auto 0;
+    margin: 30px auto 0; ;
     transition: all 0.3s;
     display: block;
 }
@@ -287,43 +293,6 @@ nav ul li a:hover {
     background: #ff1493;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
-}
-
-/* Seasonal-specific styles */
-.seasonal-hero {
-    background: linear-gradient(rgba(0,0,0,0.2), url('seasonal-bg.jpg') center/cover);
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-.seasonal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.seasonal-item {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-.seasonal-item:hover {
-    transform: translateY(-10px);
-}
-.seasonal-badge {
-    background: #ff69b4;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    display: inline-block;
-    font-size: 0.8rem;
-    margin: 10px 0;
 }
 
 /* Admin-specific styles */
@@ -436,6 +405,11 @@ body.admin-login {
 .contact textarea {
     height: 150px;
     resize: vertical;
+}
+
+/* ===== SECTIONS SCROLL FIX ===== */
+#Menu, #Specialties{
+    scroll-margin-top: 100px;
 }
 
 /* ===== FOOTER ===== */
