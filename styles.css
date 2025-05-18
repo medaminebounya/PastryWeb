@@ -62,11 +62,11 @@ body {
 }
 
 /* ===== HEADER/NAVBAR ===== */
-header {
+.glass-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -79,9 +79,40 @@ header {
     z-index: 1000;
 }
 
+.glass-header .logo {
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+}
+
+.glass-header .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-left: -10px;
+}
+
+.simple-header {
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px auto;
+    height: 200px;
+}
+
+.simple-header img {
+    max-width: 600px;
+    width: 90%;
+    height: 200px;
+}
+
 .logo img {
     width: 60px;
     transition: transform 0.3s;
+}
+
+.glass-header .logo img {
+    width: 150px;
+    margin-right: 20px;
 }
 
 .logo img:hover {
@@ -458,6 +489,87 @@ footer p {
     margin-top: 20px;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* Additional styles for signin page */
+ .auth-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+        
+.auth-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+        
+.auth-section h2 {
+    margin-top: 0;
+    color: #fff;
+    }
+        
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+        
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 182, 193, 0.15); /* Light pink base */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 105, 180, 0.15);
+    color: #fff; /* White text */
+}
+
+th {
+    background: rgba(255, 105, 180, 0.3); /* Stronger pink for header */
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: rgba(255, 182, 193, 0.25); /* Light hover effect */
+}
+        
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+}
+.success-message {
+    color: #a1f8a1 !important; /* Soft green */
+    text-shadow: 0 0 8px rgba(161, 248, 161, 0.3);
+    font-size: 0.9rem;
+    margin-top: 8px;
+    display: block;
+    transition: all 0.3s ease;
 }
 
 /* ===== ANIMATIONS ===== */
