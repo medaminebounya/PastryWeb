@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In | Patisserie Delight</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="pastry pastry-1"></div>
@@ -15,45 +16,15 @@
 
     <main class="auth-container">
         <!-- Registration Section -->
-        <section class="auth-section">
-            <h2>Register</h2>
-            <input type="text" id="in1" placeholder="Enter your name">
-            <input type="password" id="in2" placeholder="Enter a password">
-            <span id="s1" class="error-message"></span>
-            <button onclick="add()" class="btn">Add user</button>
-        </section>
-
-        <!-- Users Table Section -->
-        <section class="auth-section">
-            <h2>Registered Users</h2>
-            <button onclick="show()" class="btn">Show users in table</button>
-            <table id="table">
-                <tr><th>Full Name</th><th>Password</th></tr>
-            </table>
-        </section>
-
-        <!-- Login Section -->
-        <section class="auth-section">
-            <h2>Login</h2>
-            <form action="MainPage.html" onsubmit="return login()">
-                <label for="in3">Username:</label>
-                <input type="text" id="in3">
-                <label for="in4">Password:</label>
-                <input type="password" id="in4">
-                <span id="s2" class="error-message"></span>
-                <div>
-                    <input type="checkbox" onclick="showPass()"> Show password
-                </div>
-                <input type="submit" value="Login" class="btn">
-            </form>
-        </section>
+    <section class="auth-section">
+        <h2>Register</h2>
+        <input type="text" id="in1" placeholder="Enter your name" required>
+        <input type="password" id="in2" placeholder="Enter a password" required>
+        <span id="s1" class="error-message"></span>
+        <button onclick="add()" class="btn">Add user</button>
+    </section>
     </main>
     <footer>
-<div class="footer-links">
-            <a href="Page.html">Home</a>
-            <a href="#Menu">Menu</a>
-            <a href="#ContactUs">Contact</a>
-        </div>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

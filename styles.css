@@ -564,12 +564,20 @@ tr:hover td {
     font-size: 0.9rem;
 }
 .success-message {
-    color: #a1f8a1 !important; /* Soft green */
-    text-shadow: 0 0 8px rgba(161, 248, 161, 0.3);
+    color: #4CAF50;
     font-size: 0.9rem;
-    margin-top: 8px;
+    margin: 10px 0;
     display: block;
-    transition: all 0.3s ease;
+    padding: 8px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 4px;
+    border-left: 3px solid #4CAF50;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== ANIMATIONS ===== */
